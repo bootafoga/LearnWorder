@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bootafoga.learnworderapp"
+    android:versionCode="2"
+    android:versionName="1.1">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.bootafoga.learnworderapp.AddWordActivity"
+            android:label="@string/add_word"
+            android:parentActivityName="com.bootafoga.learnworderapp.DictionaryActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.bootafoga.learnworderapp.DictionaryActivity"
+            android:label="@string/Dictionary"
+            android:parentActivityName="com.bootafoga.learnworderapp.MainActivity"/>
+        <activity
+            android:name="com.bootafoga.learnworderapp.LearnWordsActivity"
+            android:label="@string/learn_words"
+            android:parentActivityName="com.bootafoga.learnworderapp.MainActivity" />
+        <activity android:name="com.bootafoga.learnworderapp.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
