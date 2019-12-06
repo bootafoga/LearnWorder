@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
         progress = findViewById(R.id.progress);
         new ProgressTask().execute(this);
@@ -50,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Context unused) {
             progress.setText("Уже выучено слов: " + connect.getCountLearned());
-
         }
     }
 }

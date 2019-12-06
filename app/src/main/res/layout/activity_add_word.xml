@@ -53,6 +53,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/enter_word"
                     android:textSize="30sp"
+                    android:inputType="textCapSentences"
                     android:textColor="@color/colorText"
                     />
             </com.google.android.material.textfield.TextInputLayout>
@@ -74,6 +75,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/enter_translate"
+                    android:inputType="textCapSentences"
                     android:textSize="30sp"
                     android:textColor="@color/colorText"
                     />
@@ -82,11 +84,16 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_ok"
-                style="@style/MainButtonsTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
                 android:text="@string/OK"
                 app:cornerRadius="30dp"
+                android:padding="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:onClick="onClickAddWord"
                 app:layout_constraintTop_toBottomOf="@+id/textinput_layout2"
                 app:layout_constraintStart_toStartOf="parent"

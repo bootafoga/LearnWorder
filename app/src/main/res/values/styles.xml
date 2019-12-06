@@ -17,13 +17,14 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+
     <!--- Для табов во вкладке словарь -->
     <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
 
         <item name="tabIndicatorColor">@color/colorAccent</item>
         <item name="tabIndicatorHeight">2dp</item>
         <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
-        <item name="tabSelectedTextColor">@color/colorAccent</item>
+        <item name="tabSelectedTextColor">@color/colorTextOnPrimary</item>
     </style>
 
     <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">

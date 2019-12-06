@@ -73,7 +73,7 @@ public class EditWordFragment  extends DialogFragment {
             ContentValues newVal = new ContentValues();
             newVal.put("WORD", newUsersWord);
             newVal.put("TRANSLATE", newUsersTranslate);
-            db.update("WORDS", newVal, "_id = ?", new String[]{Integer.toString(id)});
+            db.update("DICTIONARY", newVal, "_id = ?", new String[]{Integer.toString(id)});
 
             Intent intent = new Intent(getContext(), DictionaryActivity.class);
             intent.putExtra("num_page", num_page);

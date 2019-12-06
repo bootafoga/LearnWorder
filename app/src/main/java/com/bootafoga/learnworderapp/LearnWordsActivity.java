@@ -10,6 +10,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
 
 public class LearnWordsActivity extends AppCompatActivity implements LearnWordsFragment.OnFragmentInteractionListener {
@@ -38,6 +40,34 @@ public class LearnWordsActivity extends AppCompatActivity implements LearnWordsF
         learnWordsFragment = LearnWordsFragment.newInstance(true, empty);
         ft.replace(R.id.fragment_container, learnWordsFragment);
         ft.commit();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.learn_words_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        LearnWordsFragment learnWordsFragment;
+        if(!item.isChecked()) item.setChecked(true);
+
+        switch(id){
+            case R.id.eng_ru_setting:
+                learnWordsFragment = LearnWordsFragment.newInstance(true, empty);
+                ft.replace(R.id.fragment_container, learnWordsFragment);
+                ft.commit();
+                return true;
+            case R.id.ru_eng_setting:
+                learnWordsFragment = LearnWordsFragment.newInstance(false, empty);
+                ft.replace(R.id.fragment_container, learnWordsFragment);
+                ft.commit();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void AllertMessage() {
